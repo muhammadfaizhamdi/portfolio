@@ -453,15 +453,15 @@ void main() {
 <article class="col-span-1 md:col-span-12 brutalist-border bg-charcoal text-white p-8 flex flex-col md:flex-row justify-between items-start md:items-center reveal-up group hover:bg-vermilion transition-colors duration-300" style="transition-delay: 0.2s;">
     <div class="flex-1">
         <div class="flex gap-2 mb-2">
-            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">HARDWARE OPTIMIZATION</span>
-            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">PERFORMANCE TUNING</span>
+            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">AWARD WINNER</span>
+            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">COMPETITIVE PROGRAMMING</span>
+            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">FINTECH</span>
         </div>
-        <h3 class="font-headline-lg-mobile text-[32px] leading-[36px] mb-2">High-Performance System Integration</h3>
-        <p class="font-body-md text-sm text-white/70">Conducted technical research and integration of advanced optical sensors (PAW3395/3950) and magnetic-switch hardware to achieve zero-latency performance.</p>
+        <h3 class="font-headline-lg-mobile text-[32px] leading-[36px] mb-2">Double Awardee: GEMASI AMIKOM</h3>
+        <p class="font-body-md text-sm text-white/70">Secured 2nd Place in the Digital Business & Fintech category and 3rd Place in the Programming category, demonstrating a strong balance between algorithmic problem-solving and innovative business modeling.</p>
     </div>
     <div class="mt-4 md:mt-0">
-        <!-- Mengganti button menjadi tag a agar bisa diarahkan -->
-        <a href="#contact" class="inline-block border border-white px-6 py-2 font-label-caps text-[12px] uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors">DISCUSS PROJECT</a>
+        <a href="#credentials" class="inline-block border border-white px-6 py-2 font-label-caps text-[12px] uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors">VIEW CERTIFICATES</a>
     </div>
 </article>
 </div>
@@ -501,6 +501,74 @@ void main() {
 </div>
 </div>
 </section>
+<!-- Credentials & Awards Section -->
+        <section class="mb-[160px]" id="credentials">
+            <div class="col-span-1 md:col-span-12 mb-16 reveal-up">
+                <h2 class="font-display-2xl text-[60px] md:text-[80px] leading-none uppercase text-charcoal tracking-tighter">CREDENTIALS</h2>
+            </div>
+
+            <!-- CSS Grid for Certificates -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cert-grid">
+                
+                <!-- GEMASI Certificate (Ready) -->
+                <article class="brutalist-border bg-white p-6 flex flex-col reveal-up group">
+                    <div class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative">
+                        <!-- Ganti src dengan gambar sertifikat GEMASI Anda -->
+                        <img src="assets/images/gemasi-programming.jpg" alt="GEMASI Programming Certificate" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                    </div>
+                    <span class="font-code-sm text-[10px] text-vermilion uppercase mb-2">3RD PLACE WINNER</span>
+                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Programming Category</h3>
+                    <p class="font-label-caps text-xs text-secondary mt-auto">GEMASI AMIKOM</p>
+                </article>
+
+                <!-- GEMASI Certificate (Waiting for friend) -->
+                <article class="brutalist-border bg-zinc-bg p-6 flex flex-col reveal-up group border-dashed">
+                    <div class="w-full aspect-[4/3] bg-surface-dim mb-6 flex items-center justify-center border border-charcoal/20">
+                        <span class="material-symbols-outlined text-4xl text-charcoal/30">hourglass_empty</span>
+                    </div>
+                    <span class="font-code-sm text-[10px] text-charcoal/50 uppercase mb-2">2ND PLACE WINNER</span>
+                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal/50 leading-tight mb-2">Digital Business & Fintech</h3>
+                    <p class="font-label-caps text-xs text-secondary/50 mt-auto">DOCUMENT PENDING</p>
+                </article>
+
+                <!-- Dicoding Certificate 1 -->
+                <article class="brutalist-border bg-white p-6 flex flex-col reveal-up group">
+                    <div class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20">
+                        <!-- Ganti src dengan gambar sertifikat Dicoding Anda -->
+                        <img src="assets/images/dicoding-1.jpg" alt="Dicoding Certificate" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                    </div>
+                    <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">PROFESSIONAL CERTIFICATION</span>
+                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Machine Learning Specialization</h3>
+                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                </article>
+
+                <!-- HIDDEN CERTIFICATES (Will be shown when button is clicked) -->
+                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
+                    <div class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20">
+                        <img src="assets/images/dicoding-2.jpg" alt="Dicoding Certificate" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                    </div>
+                    <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">PROFESSIONAL CERTIFICATION</span>
+                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Backend Development with Python</h3>
+                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                </article>
+
+                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
+                    <div class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20">
+                        <img src="assets/images/dicoding-3.jpg" alt="Dicoding Certificate" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                    </div>
+                    <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">PROFESSIONAL CERTIFICATION</span>
+                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Frontend Web Development</h3>
+                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                </article>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="mt-12 flex justify-center reveal-up">
+                <button id="toggle-certs" class="border-2 border-charcoal text-charcoal px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal hover:text-white transition-colors duration-300 magnetic-element" data-magnetic="">
+                    SHOW ALL CREDENTIALS
+                </button>
+            </div>
+        </section>
 </main>
 <!-- Footer -->
 <footer class="bg-background dark:bg-background border-t-2 border-on-background dark:border-on-background flat no shadows full-width bottom-0 flex flex-col md:flex-row justify-between items-center px-margin-edge py-32 gap-gutter w-full font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim">
@@ -573,5 +641,27 @@ void main() {
         revealElements.forEach(el => {
             revealOnScroll.observe(el);
         });
+
+        // Toggle Hidden Certificates
+        const toggleBtn = document.getElementById('toggle-certs');
+        const hiddenCerts = document.querySelectorAll('.hidden-cert');
+        
+        if(toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                let isHidden = false;
+                hiddenCerts.forEach(cert => {
+                    cert.classList.toggle('hidden');
+                    if(cert.classList.contains('hidden')) isHidden = true;
+                });
+                
+                if(!isHidden) {
+                    toggleBtn.innerText = "SHOW LESS";
+                } else {
+                    toggleBtn.innerText = "SHOW ALL CREDENTIALS";
+                    // Optional: Scroll back to grid top when closing
+                    document.getElementById('credentials').scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        }
     </script>
 </body></html>
