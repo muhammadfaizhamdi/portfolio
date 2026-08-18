@@ -1,787 +1,481 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Muhammad Faiz Hamdi - AI Engineer & Fullstack Developer</title>
-<!-- Primary Meta Tags -->
+<html class="scroll-smooth scroll-pt-[120px]" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Muhammad Faiz Hamdi - AI Engineer & Fullstack Developer</title>
     <meta name="title" content="Muhammad Faiz Hamdi - AI Engineer & Fullstack Developer">
     <meta name="description" content="Portfolio of Muhammad Faiz Hamdi, specializing in building intelligent systems and modern web applications using Python, JavaScript, and FastAPI.">
     <meta name="author" content="Muhammad Faiz Hamdi">
     <meta name="keywords" content="AI Engineer, Fullstack Developer, FastAPI, Python, Machine Learning, Web Development, Portfolio">
-
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://domain-anda-nantinya.com/">
+    <meta property="og:url" content="https://muhammadfaizhamdi.github.io/">
     <meta property="og:title" content="Muhammad Faiz Hamdi - AI Engineer & Fullstack Developer">
     <meta property="og:description" content="Portfolio of Muhammad Faiz Hamdi, specializing in building intelligent systems and modern web applications using Python, JavaScript, and FastAPI.">
-    <meta property="og:image" content="https://domain-anda-nantinya.com/assets/images/foto-profil.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://domain-anda-nantinya.com/">
-    <meta property="twitter:title" content="Muhammad Faiz Hamdi - AI Engineer & Fullstack Developer">
-    <meta property="twitter:description" content="Portfolio of Muhammad Faiz Hamdi, specializing in building intelligent systems and modern web applications using Python, JavaScript, and FastAPI.">
-    <meta property="twitter:image" content="https://domain-anda-nantinya.com/assets/images/foto-profil.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-error": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-container-highest": "#e2e2e3",
-                    "on-primary-fixed": "#3b0900",
-                    "primary-fixed-dim": "#ffb5a0",
-                    "surface-tint": "#b12d00",
-                    "on-primary-container": "#fffbff",
-                    "outline": "#926f66",
-                    "on-secondary-fixed-variant": "#4a4643",
-                    "surface-container": "#eeeeef",
-                    "surface-dim": "#dadadb",
-                    "background": "#f9f9fa",
-                    "outline-variant": "#e7bdb2",
-                    "inverse-primary": "#ffb5a0",
-                    "tertiary-fixed": "#d4e3ff",
-                    "tertiary-container": "#0075d5",
-                    "on-background": "#1a1c1d",
-                    "secondary-fixed": "#e9e1dd",
-                    "tertiary-fixed-dim": "#a5c8ff",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary-container": "#fefcff",
-                    "surface-bright": "#f9f9fa",
-                    "on-surface-variant": "#5d4038",
-                    "on-tertiary": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "error": "#ba1a1a",
-                    "primary-fixed": "#ffdbd1",
-                    "inverse-surface": "#2f3132",
-                    "secondary-fixed-dim": "#ccc5c2",
-                    "surface": "#f9f9fa",
-                    "on-tertiary-fixed": "#001c3a",
-                    "on-tertiary-fixed-variant": "#004785",
-                    "tertiary": "#005daa",
-                    "on-error-container": "#93000a",
-                    "secondary-container": "#e9e1dd",
-                    "primary": "#ad2c00",
-                    "inverse-on-surface": "#f0f1f2",
-                    "on-secondary-fixed": "#1e1b19",
-                    "on-primary-fixed-variant": "#872000",
-                    "surface-variant": "#e2e2e3",
-                    "surface-container-high": "#e8e8e9",
-                    "on-surface": "#1a1c1d",
-                    "on-secondary-container": "#686361",
-                    "primary-container": "#d83900",
-                    "surface-container-low": "#f3f3f4",
-                    "secondary": "#625d5b",
-                    "zinc-bg": "#F4F4F5",
-                    "charcoal": "#1C1917",
-                    "vermilion": "#FF4500"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "gutter": "24px",
-                    "baseline": "8px",
-                    "margin-edge": "48px",
-                    "bento-gap": "16px"
-            },
-            "fontFamily": {
-                    "display-2xl": [
-                            "Plus Jakarta Sans", "sans-serif"
-                    ],
-                    "body-md": [
-                            "Inter", "sans-serif"
-                    ],
-                    "label-caps": [
-                            "JetBrains Mono", "monospace"
-                    ],
-                    "code-sm": [
-                            "JetBrains Mono", "monospace"
-                    ],
-                    "headline-lg": [
-                            "Plus Jakarta Sans", "sans-serif"
-                    ],
-                    "headline-lg-mobile": [
-                            "Plus Jakarta Sans", "sans-serif"
-                    ]
-            },
-            "fontSize": {
-                    "display-2xl": [
-                            "120px",
-                            {
-                                    "lineHeight": "110px",
-                                    "letterSpacing": "-0.04em",
-                                    "fontWeight": "800"
-                            }
-                    ],
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "24px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "label-caps": [
-                            "12px",
-                            {
-                                    "lineHeight": "16px",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "code-sm": [
-                            "13px",
-                            {
-                                    "lineHeight": "20px",
-                                    "letterSpacing": "0.02em",
-                                    "fontWeight": "500"
-                            }
-                    ],
-                    "headline-lg": [
-                            "64px",
-                            {
-                                    "lineHeight": "72px",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "headline-lg-mobile": [
-                            "40px",
-                            {
-                                    "lineHeight": "44px",
-                                    "fontWeight": "700"
-                            }
-                    ]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        body { cursor: none; background-color: theme('colors.zinc-bg'); color: theme('colors.charcoal'); overflow-x: hidden; }
-        ::selection { background-color: theme('colors.vermilion'); color: white; }
-        
-            /* Custom Cursor */
-            #custom-cursor {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 10px;  /* Dikecilkan dari 16px agar lebih tajam */
-                height: 10px; /* Dikecilkan dari 16px */
-                background-color: white; 
-                border-radius: 50%; /* Ini yang mengubahnya dari kotak menjadi lingkaran sempurna */
-                pointer-events: none;
-                z-index: 9999;
-                transform: translate(-50%, -50%);
-                mix-blend-mode: difference;
-                transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
-                will-change: transform;
-            }
-            #custom-cursor.hovering {
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-                background-color: white; 
-            }
-
-        /* Marquee Animation */
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100vw;
-            margin-left: -48px; /* Offset grid margin */
-            border-top: 2px solid theme('colors.charcoal');
-            border-bottom: 2px solid theme('colors.charcoal');
-            padding: 16px 0;
-            background: theme('colors.zinc-bg');
-            position: relative;
-            z-index: 10;
-        }
-        .marquee-content {
-            display: inline-block;
-            animation: marquee 20s linear infinite;
-        }
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Magnetic Button Spring */
-        .magnetic { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        
-        /* Snappy Entrance */
-        .reveal-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .reveal-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .brutalist-border {
-            border: 1px solid theme('colors.charcoal');
-            transition: all 0.2s ease;
-        }
-        .brutalist-border:hover {
-            border-width: 3px;
-            border-color: theme('colors.vermilion');
-            transform: translate(-2px, -2px);
-        }
-    </style>
+    <meta property="og:image" content="https://muhammadfaizhamdi.github.io/assets/images/foto-profil.webp">
+    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" /></noscript>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="antialiased min-h-screen relative font-body-md text-body-md selection:bg-vermilion selection:text-white">
-<!-- Custom Cursor Element -->
-<div id="custom-cursor"></div>
-<!-- Fixed Background Animation -->
-<div class="fixed inset-0 z-[-1] pointer-events-none opacity-40">
-<!-- STITCH_SHADER_START:ANIMATION_1 class="absolute inset-0 w-full h-full" -->
-<div class="absolute inset-0 w-full h-full" style="display:block;">
-<canvas id="shader-canvas-ANIMATION_1" style="display:block;width:100%;height:100%"></canvas>
-<script>
-(function() {
-  const canvas = document.getElementById('shader-canvas-ANIMATION_1');
-
-  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
-  // This fires on initial layout and whenever the element is resized.
-  function syncSize() {
-    const w = canvas.clientWidth  || 1280;
-    const h = canvas.clientHeight || 720;
-    if (canvas.width !== w || canvas.height !== h) {
-      canvas.width  = w;
-      canvas.height = h;
-    }
-  }
-  if (typeof ResizeObserver !== 'undefined') {
-    new ResizeObserver(syncSize).observe(canvas);
-  }
-  syncSize();
-
-  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-  if (!gl) return;
-  const vs = `attribute vec2 a_position;
-varying vec2 v_texCoord;
-void main() {
-  v_texCoord = a_position * 0.5 + 0.5;
-  gl_Position = vec4(a_position, 0.0, 1.0);
-}`;
-  const fs = `precision highp float;
-varying vec2 v_texCoord;
-uniform float u_time;
-uniform vec2 u_resolution;
-
-float noise(vec2 p) {
-    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
-}
-
-void main() {
-    vec2 uv = v_texCoord;
     
-    // Very subtle grain/paper texture
-    float n = noise(uv * u_resolution.xy + u_time * 0.001);
-    
-    // Base color: #F4F4F5 (Zinc-100 equivalent)
-    vec3 baseColor = vec3(0.957, 0.957, 0.961);
-    
-    // Subtle shadow gradient from top-left
-    float grad = 1.0 - length(uv - vec2(0.0)) * 0.15;
-    
-    vec3 color = baseColor * grad;
-    color += (n - 0.5) * 0.015; // Very fine grain
-    
-    gl_FragColor = vec4(color, 1.0);
-}`;
-  function cs(type, src) {
-    const s = gl.createShader(type);
-    gl.shaderSource(s, src);
-    gl.compileShader(s);
-    return s;
-  }
-  const prog = gl.createProgram();
-  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
-  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
-  gl.linkProgram(prog);
-  gl.useProgram(prog);
-  const buf = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
-  const pos = gl.getAttribLocation(prog, 'a_position');
-  gl.enableVertexAttribArray(pos);
-  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
-  const uTime = gl.getUniformLocation(prog, 'u_time');
-  const uRes = gl.getUniformLocation(prog, 'u_resolution');
-  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+    <div id="preloader" class="fixed inset-0 z-[999999] bg-zinc-bg flex flex-col items-center justify-center transition-opacity duration-700 ease-in-out">
+        <div class="w-full max-w-[300px] px-6">
+            <div class="flex justify-between items-end mb-2 font-label-caps text-charcoal">
+                <span class="tracking-widest uppercase animate-pulse">System Boot</span>
+                <span id="preloader-counter">0%</span>
+            </div>
+            <div class="w-full h-3 border border-charcoal bg-white overflow-hidden">
+                <div id="preloader-bar" class="h-full bg-vermilion w-0 transition-all duration-75"></div>
+            </div>
+        </div>
+    </div>
 
-  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
-  // Shaders that need normalized coords should use: u_mouse / u_resolution.
-  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-  window.addEventListener('mousemove', (event) => {
-    const rect = canvas.getBoundingClientRect();
-    if (rect.width && rect.height) {
-      const nx = (event.clientX - rect.left) / rect.width;
-      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
-      mouse.x = nx * canvas.width;
-      mouse.y = ny * canvas.height;
-    }
-  });
+    <div id="custom-cursor"></div>
+    
+    <div class="fixed inset-0 z-[-1] pointer-events-none opacity-40">
+        <canvas id="shader-canvas-ANIMATION_1" class="w-full h-full block"></canvas>
+    </div>
 
-  function render(t) {
-    if (typeof ResizeObserver === 'undefined') syncSize();
-    gl.viewport(0, 0, canvas.width, canvas.height);
-    if (uTime) gl.uniform1f(uTime, t * 0.001);
-    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
-    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    requestAnimationFrame(render);
-  }
-  render(0);
-})();
-</script>
-</div>
-<!-- STITCH_SHADER_END:ANIMATION_1 -->
-</div>
-<!-- TopAppBar -->
-<header class="bg-background/80 backdrop-blur-md dark:bg-background/80 font-headline-lg text-headline-lg font-label-caps text-label-caps docked full-width top-0 sticky z-50 border-b-2 border-on-background dark:border-on-background flat no shadows flex justify-between items-center px-margin-edge py-gutter max-w-full">
-<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tighter text-on-background dark:text-on-background">
+    <header class="bg-background/80 backdrop-blur-md font-label-caps text-label-caps docked full-width top-0 sticky z-50 border-b border-charcoal/10 flex justify-between items-center px-6 md:px-margin-edge py-4 md:py-gutter max-w-full">
+        <a href="#" class="text-xl md:font-headline-lg-mobile md:text-headline-lg-mobile font-bold tracking-tighter text-charcoal hover:text-vermilion transition-colors z-50">
             MUHAMMAD FAIZ HAMDI
-        </div>
-<nav class="hidden md:flex gap-8">
-<!-- Active State on WORK -->
-<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-caps text-label-caps uppercase tracking-widest hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 magnetic-element" data-magnetic="" href="#work">WORK</a>
-<a class="text-on-background dark:text-on-background opacity-60 font-label-caps text-label-caps uppercase tracking-widest hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 magnetic-element" data-magnetic="" href="#experience">EXPERIENCE</a>
-<a class="text-on-background dark:text-on-background opacity-60 font-label-caps text-label-caps uppercase tracking-widest hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 magnetic-element" data-magnetic="" href="#stack">STACK</a>
-<a class="text-on-background dark:text-on-background opacity-60 font-label-caps text-label-caps uppercase tracking-widest hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 magnetic-element" data-magnetic="" href="#contact">CONTACT</a>
-</nav>
-<a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" class="hidden md:inline-flex items-center justify-center bg-vermilion text-white font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest border border-vermilion hover:bg-transparent hover:text-vermilion transition-colors duration-300 magnetic-element" data-magnetic="">
+        </a>
+        <nav class="hidden md:flex gap-8">
+            <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#stack">STACK</a>
+            <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#work">WORK</a>
+            <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#experience">EXPERIENCE</a>
+            <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#contact">CONTACT</a>
+        </nav>
+        <a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center bg-vermilion text-white font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-charcoal transition-colors duration-300 magnetic-element" data-magnetic="">
             DOWNLOAD CV
         </a>
-</header>
-<main class="px-margin-edge pb-[160px]">
-<!-- Hero Section -->
-<section class="min-h-[80vh] flex flex-col justify-center pt-24 pb-32 relative z-10">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Kolom Kiri: Teks -->
-<div class="col-span-1 md:col-span-7 flex flex-col justify-center reveal-up z-10">
-    <h1 class="font-display-2xl text-display-2xl md:text-[110px] leading-none text-charcoal mb-4 tracking-tight mix-blend-multiply">
-        AI ENGINEER
-    </h1>
-    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-charcoal/80 mb-8 uppercase italic">
-        FULLSTACK DEVELOPER
-    </h2>
-    <p class="font-body-md text-lg text-secondary max-w-2xl mb-12 leading-relaxed">
-        I am an aspiring AI Engineer and Fullstack Developer. I specialize in building intelligent systems and modern web applications using Python, JavaScript, and FastAPI. My focus lies in combining robust backend architecture with machine learning integration to solve real-world problems and optimize operational efficiency.
-    </p>
-    <div class="flex flex-wrap gap-6">
-        <a href="#work" class="inline-flex items-center justify-center bg-vermilion text-white px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal transition-colors duration-300 magnetic-element" data-magnetic="">
-            EXPLORE WORK
-        </a>
-        <a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" class="inline-flex items-center justify-center border-2 border-charcoal text-charcoal px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal hover:text-white transition-colors duration-300 magnetic-element" data-magnetic="">
-            DOWNLOAD CV
-        </a>
-    </div>
-</div>
+    </header>
 
-<!-- Kolom Kanan: Foto Profil -->
-<div class="col-span-1 md:col-span-5 relative reveal-up flex items-center justify-center md:justify-end mt-16 md:mt-0" style="transition-delay: 0.2s;">
-    <!-- Bingkai Foto Brutalist -->
-    <div class="relative w-full max-w-[380px] aspect-[4/5] brutalist-border bg-white group overflow-hidden z-10">
-        <!-- GAMBAR ANDA DI SINI -->
-        <img src="assets/images/foto-profil.png" alt="Muhammad Faiz Hamdi" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" />
+    <main class="px-6 md:px-margin-edge pb-[160px] overflow-hidden">
         
-        <div class="absolute inset-0 border-4 border-transparent group-hover:border-vermilion transition-colors duration-500 pointer-events-none"></div>
-    </div>
-    <!-- Bayangan Offset Geometris di belakang foto -->
-    <div class="absolute w-full max-w-[380px] aspect-[4/5] bg-charcoal -bottom-4 right-0 md:-right-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
-</div>
-</div>
-</section>
-<!-- Marquee Ticker -->
-<section class="mb-[160px] reveal-up" id="stack">
-<div class="marquee-container">
-<div class="marquee-content font-code-sm text-code-sm uppercase tracking-widest text-charcoal">
-<span class="mx-4">PYTHON</span> • <span class="mx-4">FASTAPI</span> • <span class="mx-4">MACHINE LEARNING</span> • <span class="mx-4">JAVASCRIPT</span> • <span class="mx-4">TENSORFLOW</span> • <span class="mx-4">PYTORCH</span> • 
-                    <span class="mx-4">PYTHON</span> • <span class="mx-4">FASTAPI</span> • <span class="mx-4">MACHINE LEARNING</span> • <span class="mx-4">JAVASCRIPT</span> • <span class="mx-4">TENSORFLOW</span> • <span class="mx-4">PYTORCH</span>
-</div>
-</div>
-</section>
-<!-- Projects Bento Grid -->
-<section class="mb-[160px]" id="work">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-bento-gap">
-<!-- Large Card (Spans 8) -->
-<article class="col-span-1 md:col-span-8 brutalist-border bg-white p-8 min-h-[400px] flex flex-col justify-between reveal-up group relative overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none grayscale" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant red. The mood is serene yet technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAosFwEEy1iSwLFK3C2JPk5s3qjMk_6lOmWOyLwBJ_7r0MjB9fRTI5OO2eO6mU4PA2SmFlkIrqA6xVcnIse_gz0x69d1VdoDcVIJ4pepGJD1hqknH5Hw1zmD95_TRDJt99Bgm4kilGk2zSC2Dv8Ptvi0Ny2H3tuHuNg8JIgLsGICbzp7bLiyhREyHtRvN-fyJwGyyswL7dFoUEl2A3Xyh0Raw30AP4oescHvgjl-7j6SEWPnVi83UIF')"></div>
-<div>
-<div class="flex gap-2 mb-4">
-<span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">DEEP LEARNING</span>
-<span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">REAL-TIME</span>
-</div>
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg text-charcoal leading-tight mb-4 group-hover:text-vermilion transition-colors">AMATI: Adaptive Learning Recommender System</h3>
-<p class="font-body-md text-body-md text-secondary max-w-xl">Architected an adaptive learning platform and virtual tutor tailored for junior high school mathematics (Grade 7 curriculum). Engineered the backend infrastructure utilizing FastAPI and machine learning algorithms to deliver personalized, dynamic learning paths.</p>
-</div>
-<div class="mt-8 flex justify-end">
-    <a href="https://github.com/muhammadfaizhamdi/amati-app" target="_blank" rel="noopener noreferrer" class="inline-block" aria-label="Lihat Proyek AMATI di GitHub">
-        <span class="material-symbols-outlined text-4xl text-charcoal group-hover:text-vermilion transition-transform duration-300 hover:scale-110" data-icon="arrow_outward">arrow_outward</span>
-    </a>
-</div>
-</article>
-<!-- Medium Card (Spans 4) -->
-<article class="col-span-1 md:col-span-4 brutalist-border bg-white p-8 min-h-[400px] flex flex-col justify-between reveal-up group relative overflow-hidden" style="transition-delay: 0.1s;">
-    <div>
-        <div class="flex gap-2 mb-4 flex-wrap">
-            <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">SYSTEM ARCHITECTURE</span>
-            <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">BUSINESS ANALYSIS</span>
-        </div>
-        <h3 class="font-headline-lg-mobile text-[32px] leading-[36px] text-charcoal leading-tight mb-4 group-hover:text-vermilion transition-colors">Operational Digitalization Initiative</h3>
-        <p class="font-body-md text-sm text-secondary">Bridged the gap between business operations and technical solutions by planning a digitalization project to significantly improve operational workflow for a developing enterprise.</p>
-    </div>
-    <div class="mt-8">
-        <span class="material-symbols-outlined text-3xl text-charcoal group-hover:text-vermilion transition-colors" data-icon="integration_instructions">integration_instructions</span>
-    </div>
-</article>
-<!-- Small Card (Spans 12, narrow) -->
-<article class="col-span-1 md:col-span-12 brutalist-border bg-charcoal text-white p-8 flex flex-col md:flex-row justify-between items-start md:items-center reveal-up group hover:bg-vermilion transition-colors duration-300" style="transition-delay: 0.2s;">
-    <div class="flex-1">
-        <div class="flex gap-2 mb-2">
-            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">AWARD WINNER</span>
-            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">COMPETITIVE PROGRAMMING</span>
-            <span class="border border-white/30 px-2 py-1 font-code-sm text-[10px] uppercase text-white/80">FINTECH</span>
-        </div>
-        <h3 class="font-headline-lg-mobile text-[32px] leading-[36px] mb-2">Double Awardee: GEMASI AMIKOM</h3>
-        <p class="font-body-md text-sm text-white/70">Secured 2nd Place in the Digital Business & Fintech category and 3rd Place in the Programming category, demonstrating a strong balance between algorithmic problem-solving and innovative business modeling.</p>
-    </div>
-    <div class="mt-4 md:mt-0">
-        <a href="#credentials" class="inline-block border border-white px-6 py-2 font-label-caps text-[12px] uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors">VIEW CERTIFICATES</a>
-    </div>
-</article>
-</div>
-</section>
-<!-- Experience Timeline -->
-<section class="mb-[160px]" id="experience">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
-<!-- The Line -->
-<div class="hidden md:block absolute left-[41.666%] top-0 bottom-0 w-[2px] bg-charcoal/20 ml-[-1px]"></div>
-<div class="col-span-1 md:col-span-12 mb-16 reveal-up">
-<h2 class="font-display-2xl text-[80px] leading-[80px] uppercase text-charcoal tracking-tighter">EXPERIENCE</h2>
-</div>
-<!-- Timeline Node 1 -->
-<div class="col-span-1 md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter relative reveal-up mb-16 group">
-<div class="md:col-span-5 text-left md:text-right md:pr-12 flex flex-col justify-start pt-2">
-<span class="font-code-sm text-lg text-vermilion mb-1">2022 — PRESENT</span>
-<span class="font-label-caps text-sm text-charcoal uppercase">TECH INNOVATION LABS</span>
-</div>
-<!-- Node Dot -->
-<div class="hidden md:block absolute left-[41.666%] top-3 w-4 h-4 bg-zinc-bg border-2 border-charcoal rounded-full transform -translate-x-1/2 group-hover:bg-vermilion group-hover:border-vermilion transition-colors z-10"></div>
-<div class="md:col-span-7 md:pl-12">
-<h3 class="font-headline-lg-mobile text-[40px] leading-[44px] text-charcoal mb-4">Senior AI Engineer</h3>
-<p class="font-body-md text-secondary max-w-xl">Lead a cross-functional team of researchers and engineers to deploy large language models into production environments. Architected the primary inference pipeline, reducing latency by 35% while handling 10k+ requests/second.</p>
-</div>
-</div>
-<!-- Timeline Node 2 -->
-<div class="col-span-1 md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter relative reveal-up mb-16 group">
-<div class="md:col-span-5 text-left md:text-right md:pr-12 flex flex-col justify-start pt-2">
-<span class="font-code-sm text-lg text-charcoal/60 mb-1">2019 — 2022</span>
-<span class="font-label-caps text-sm text-charcoal uppercase">DATA DYNAMICS INC.</span>
-</div>
-<div class="hidden md:block absolute left-[41.666%] top-3 w-4 h-4 bg-zinc-bg border-2 border-charcoal/40 rounded-full transform -translate-x-1/2 group-hover:border-charcoal transition-colors z-10"></div>
-<div class="md:col-span-7 md:pl-12">
-<h3 class="font-headline-lg-mobile text-[40px] leading-[44px] text-charcoal/80 mb-4">Machine Learning Developer</h3>
-<p class="font-body-md text-secondary max-w-xl">Developed predictive models for financial forecasting using PyTorch. Implemented automated data validation pipelines, significantly improving model training stability and output reliability.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Credentials & Awards Section -->
-        <section class="mb-[160px]" id="credentials">
-            <div class="col-span-1 md:col-span-12 mb-16 reveal-up">
-                <h2 class="font-display-2xl text-[60px] md:text-[80px] leading-none uppercase text-charcoal tracking-tighter">CREDENTIALS</h2>
+        <section class="min-h-[80vh] flex flex-col justify-center pt-16 md:pt-24 pb-32 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-gutter items-center">
+                <div class="col-span-1 md:col-span-7 flex flex-col justify-center reveal-up z-10 order-2 md:order-1">
+                    <h1 class="font-display-2xl text-[64px] leading-[64px] font-bold sm:text-[90px] sm:leading-[90px] md:text-[110px] md:leading-none text-charcoal mb-2 tracking-tight mix-blend-multiply">
+                        FULLSTACK
+                    </h1>
+                    <h2 class="font-headline-lg text-2xl sm:text-[32px] md:text-[40px] lg:text-[50px] text-charcoal/80 mb-8 uppercase italic leading-tight font-bold whitespace-nowrap">
+                        DEVELOPER & AI ENGINEER
+                    </h2>
+                    <p class="font-body-md text-base sm:text-lg text-charcoal/80 max-w-2xl mb-12 leading-relaxed">
+                        I am a Fullstack Developer focusing on building robust end-to-end web applications. With expertise in JavaScript, Next.js, Python, and FastAPI, I specialize in creating seamless user interfaces and strong backend architectures. I bring additional value through practical experience in integrating machine learning models to build smarter digital solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
+                        <a href="#work" class="inline-flex items-center justify-center bg-vermilion text-white px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal transition-colors duration-300 magnetic-element text-center w-full sm:w-auto" data-magnetic="">
+                            EXPLORE WORK
+                        </a>
+                        <a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center border-2 border-charcoal text-charcoal px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal hover:text-white transition-colors duration-300 magnetic-element text-center w-full sm:w-auto" data-magnetic="">
+                            DOWNLOAD CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-5 relative reveal-up flex justify-center md:justify-end mt-4 md:mt-0 order-1 md:order-2" style="transition-delay: 0.2s;">
+                    <div class="relative w-full max-w-[250px] sm:max-w-[280px] md:max-w-[320px] aspect-[4/5] group z-10 mx-auto md:mx-0">
+                        <div class="absolute inset-0 bg-charcoal translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4 -z-10"></div>
+                        <img src="assets/images/foto-profil.webp" alt="Muhammad Faiz Hamdi" fetchpriority="high" class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:border-[4px] group-hover:border-vermilion group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300 relative z-10" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-[160px] reveal-up" id="stack">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-12 relative">
+                <div class="col-span-1 md:col-span-12">
+                    <h2 class="font-display-2xl text-[48px] sm:text-[60px] lg:text-[80px] leading-none uppercase text-charcoal tracking-tighter">TECH STACK</h2>
+                </div>
             </div>
 
-            <!-- CSS Grid for Certificates -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cert-grid">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                <div class="flex flex-col">
+                    <h3 class="font-label-caps font-bold text-sm text-vermilion uppercase tracking-widest border-b-2 border-charcoal pb-4 mb-2">AI & Machine Learning</h3>
+                    <div class="flex flex-col">
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Python</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">TensorFlow, PyTorch, TensorRT</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Deep Learning & Generative AI</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">NLP & Computer Vision</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Time Series & Knowledge Tracing</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Vector DB</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">EDA & Data Cleaning</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <h3 class="font-label-caps font-bold text-sm text-charcoal uppercase tracking-widest border-b-2 border-charcoal pb-4 mb-2">Web Development</h3>
+                    <div class="flex flex-col">
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">JavaScript, HTML5, CSS3</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">React.js & Next.js</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">FastAPI, Node.js, Express</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">RESTful API</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Tailwind CSS</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">WebGL (Fragment Shaders)</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Intersection Observer API</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <h3 class="font-label-caps font-bold text-sm text-charcoal uppercase tracking-widest border-b-2 border-charcoal pb-4 mb-2">Tools & Databases</h3>
+                    <div class="flex flex-col">
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">PostgreSQL & MySQL</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Git & GitHub</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">VS Code & Jupyter Notebook</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Figma</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Prompt Engineering</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Metadata Tagging</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Data Synthesis</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-[160px]" id="work">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-12 relative reveal-up">
+                <div class="col-span-1 md:col-span-12">
+                    <h2 class="font-display-2xl text-[48px] sm:text-[60px] lg:text-[80px] leading-none uppercase text-charcoal tracking-tighter">
+                        SELECTED WORKS
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-bento-gap">
+                <article class="col-span-1 md:col-span-8 bg-white shadow-sm p-6 sm:p-8 min-h-[300px] md:min-h-[400px] flex flex-col justify-between reveal-up group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none grayscale" style="background-image: url('assets/images/kreasikan-bg.webp')"></div>
+                    <div class="relative z-10">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="border border-vermilion text-vermilion px-2 py-1 font-code-sm text-[10px] uppercase">LIVE SAAS</span>
+                            <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">NEXT.JS</span>
+                            <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">OPENAI</span>
+                        </div>
+                        <h3 class="text-[32px] md:text-[64px] text-charcoal leading-tight mb-4 font-bold font-headline-lg">KreasiKan: AI Content Platform</h3>
+                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 max-w-xl">An all-in-one content automation platform that helps creators and small businesses effortlessly scale their social media presence. It features a visual workflow builder that connects various AI models to generate customized, platform-ready content.</p>
+                    </div>
+                    <div class="mt-8 flex justify-end relative z-10">
+                        <a href="https://kreasikan.app" target="_blank" rel="noopener noreferrer" class="inline-block" aria-label="Visit KreasiKan Live Website">
+                            <span class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1">arrow_outward</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-span-1 md:col-span-4 bg-white shadow-sm p-6 sm:p-8 min-h-[300px] md:min-h-[400px] flex flex-col justify-between reveal-up group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md" style="transition-delay: 0.1s;">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none grayscale" style="background-image: url('assets/images/amati-bg.webp')"></div>
+                    <div class="relative z-10">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="border border-vermilion text-vermilion px-2 py-1 font-code-sm text-[10px] uppercase">AI SYSTEM</span>
+                            <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">FASTAPI</span>
+                            <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">TENSORFLOW</span>
+                        </div>
+                        <h3 class="text-[32px] md:text-[40px] leading-tight text-charcoal mb-4 font-bold font-headline-lg">AMATI: Adaptive Learning</h3>
+                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 group-hover:pr-4">A smart educational platform designed to make math learning highly personalized. It combines a virtual tutor with AI to adapt the curriculum's difficulty to each student's pace in real-time.</p>
+                    </div>
+                    <div class="mt-8 flex justify-end relative z-10">
+                        <a href="https://github.com/muhammadfaizhamdi/amati-app" target="_blank" rel="noopener noreferrer" class="inline-block" aria-label="View AMATI Code">
+                            <span class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1">arrow_outward</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-span-1 md:col-span-12 bg-charcoal text-white shadow-sm p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center reveal-up group hover:-translate-y-1 hover:bg-vermilion hover:shadow-md transition-all duration-300" style="transition-delay: 0.2s;">
+                    <div class="flex-1 relative z-10 mb-6 md:mb-0 md:pr-16 w-full">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase transition-colors duration-300">AWARD WINNER</span>
+                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase transition-colors duration-300">COMPETITIVE PROGRAMMING</span>
+                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase transition-colors duration-300">FINTECH</span>
+                        </div>
+                        <h3 class="text-[28px] md:text-[36px] leading-tight mb-2 font-bold font-headline-lg">Award Winner: GEMASI AMIKOM</h3>
+                        <p class="font-body-md text-sm sm:text-base text-white/90 max-w-3xl lg:max-w-4xl">Secured 2nd Place in Digital Business & Fintech and 3rd Place in Programming. This recognition demonstrates a strong balance between innovative business strategy, product feasibility, and logical algorithmic problem-solving.</p>
+                    </div>
+                    <div class="relative z-10 w-full md:w-auto shrink-0">
+                        <a href="#credentials" class="block md:inline-block bg-transparent text-white border border-white px-8 py-4 md:py-3 font-label-caps text-[12px] uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors text-center whitespace-nowrap">VIEW CERTIFICATES</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-span-1 md:col-span-12 mt-16 reveal-up">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="font-label-caps text-lg text-charcoal uppercase tracking-widest">Other Notable Work</h3>
+                    <div class="h-[1px] flex-1 bg-charcoal/20"></div>
+                </div>
                 
-                <!-- VISIBLE 1: GEMASI 2nd Place (JPEG Only) -->
-                <article class="brutalist-border bg-white p-6 flex flex-col reveal-up group">
-                    <a href="assets/images/cert-gemasi-2.jpg" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer" aria-label="Lihat Sertifikat Asli">
-                        <img src="assets/images/cert-gemasi-2.jpg" alt="GEMASI 2nd Place" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="bg-white shadow-sm p-6 sm:p-8 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="border border-vermilion text-vermilion px-2 py-1 font-code-sm text-[10px] uppercase">WEB APP</span>
+                                <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">PYTHON</span>
+                                <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">POSTGRESQL</span>
+                            </div>
+                            <h4 class="text-xl sm:text-2xl text-charcoal mb-2 font-bold font-headline-lg">Zeera Laundry System</h4>
+                            <p class="font-body-md text-sm text-charcoal/80 mb-6">A complete management platform built to simplify operations. It equips owners with an operational dashboard, giving customers a login-free portal to track orders via QR codes.</p>
+                            <div class="mt-auto flex justify-end">
+                                <a href="https://github.com/muhammadfaizhamdi/zeera-laundry-system" target="_blank" rel="noopener noreferrer" class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1" aria-label="View Zeera Laundry Code">arrow_outward</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white shadow-sm p-6 sm:p-8 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="border border-vermilion text-vermilion px-2 py-1 font-code-sm text-[10px] uppercase">MOBILE APP</span>
+                                <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">KOTLIN</span>
+                                <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">ON-DEVICE ML</span>
+                            </div>
+                            <h4 class="text-xl sm:text-2xl text-charcoal mb-2 font-bold font-headline-lg">EduKids Learning App</h4>
+                            <p class="font-body-md text-sm text-charcoal/80 mb-6">An interactive Android app making learning fun and safe for children. It features gamified quizzes and utilizes on-device machine learning to recognize physical objects.</p>
+                            <div class="mt-auto flex justify-end">
+                                <a href="https://github.com/muhammadfaizhamdi/KidsEducation" target="_blank" rel="noopener noreferrer" class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1" aria-label="View EduKids Code">arrow_outward</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-transparent p-6 sm:p-8 flex flex-col items-center justify-center text-charcoal/40 transition-all duration-300 min-h-[200px] sm:min-h-[250px] group hover:-translate-y-1 hover:ring-1 hover:ring-charcoal/10">
+                        <span class="material-symbols-outlined text-4xl mb-2 group-hover:text-vermilion transition-colors">code</span>
+                        <p class="font-label-caps text-xs uppercase text-center tracking-widest group-hover:text-charcoal/80 transition-colors">Building Next Project...</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-[160px] relative" id="experience">
+            <div class="absolute left-[16px] md:left-[41.666%] top-0 bottom-0 w-[1px] bg-charcoal/20 ml-[0px] z-0 hidden sm:block"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+                <div class="col-span-1 md:col-span-12 mb-12 md:mb-16 reveal-up pl-10 md:pl-0">
+                    <h2 class="font-display-2xl text-[48px] sm:text-[60px] lg:text-[80px] leading-none uppercase text-charcoal tracking-tighter">EXPERIENCE</h2>
+                </div>
+
+                <div class="col-span-1 md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-gutter relative reveal-up mb-12 md:mb-16 group pl-10 md:pl-0">
+                    <!-- Bulatan Atas: Abu-abu saat diam, Oren Penuh saat Hover -->
+                    <div class="hidden sm:block absolute left-[16px] md:left-[41.666%] top-2 md:top-3 w-[14px] h-[14px] bg-zinc-bg border-[2px] border-charcoal/40 group-hover:border-vermilion group-hover:bg-vermilion rounded-full transform -translate-x-1/2 transition-all duration-300 z-10"></div>
+                    <div class="md:col-span-5 text-left md:text-right md:pr-12 flex flex-col justify-start pt-1 md:pt-2">
+                        <span class="font-code-sm text-sm sm:text-base md:text-lg text-vermilion mb-1">JUL 2026 — PRESENT</span>
+                        <span class="font-label-caps text-xs sm:text-sm text-charcoal uppercase">ZEERA LAUNDRY</span>
+                    </div>
+                    <div class="md:col-span-7 md:pl-12">
+                        <h3 class="font-headline-lg-mobile md:text-[40px] leading-[44px] text-charcoal mb-3 md:mb-4 font-bold">Freelance Web Developer</h3>
+                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 max-w-xl transition-all duration-300 group-hover:tracking-wide">Designed and developed a custom fullstack information system for business operations. Integrated a customer-facing self-tracking portal with QR code features to enhance service transparency and efficiency.</p>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-gutter relative reveal-up pl-10 md:pl-0">
+                    <!-- Bulatan Bawah: Abu-abu diam, tanpa efek hover -->
+                    <div class="hidden sm:block absolute left-[16px] md:left-[41.666%] top-2 md:top-3 w-[14px] h-[14px] bg-zinc-bg border-[2px] border-charcoal/40 rounded-full transform -translate-x-1/2 z-10"></div>
+                    <div class="md:col-span-5 text-left md:text-right md:pr-12 flex flex-col justify-start pt-1 md:pt-2">
+                        <span class="font-code-sm text-sm sm:text-base md:text-lg text-charcoal/60 mb-1">FEB 2026 — AUG 2026</span>
+                        <span class="font-label-caps text-xs sm:text-sm text-charcoal uppercase">DICODING INDONESIA</span>
+                    </div>
+                    <div class="md:col-span-7 md:pl-12">
+                        <h3 class="font-headline-lg-mobile md:text-[40px] leading-[44px] text-charcoal/80 mb-3 md:mb-4 font-bold">AI Engineering Cohort</h3>
+                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 max-w-xl">Completed an intensive, project-based scholarship program focusing on Python ecosystems and Machine Learning fundamentals. Engineered and deployed practical AI models and modern web applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-[160px]" id="credentials">
+            <div class="col-span-1 md:col-span-12 mb-16 reveal-up">
+                <h2 class="font-display-2xl text-[48px] sm:text-[60px] lg:text-[80px] leading-none uppercase text-charcoal tracking-tighter">CREDENTIALS</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cert-grid">
+                
+                <article class="bg-white p-6 flex flex-col reveal-up group transition-transform duration-300 hover:-translate-y-1">
+                    <a href="assets/docs/cert-gemasi-2.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer" aria-label="View Certificate">
+                        <img src="assets/images/cert-gemasi-2.webp" loading="lazy" decoding="async" alt="GEMASI 2nd Place" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-vermilion uppercase mb-2">2ND PLACE WINNER</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Digital Business & Fintech</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">GEMASI AMIKOM</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Digital Business & Fintech</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">GEMASI AMIKOM</p>
                 </article>
 
-                <!-- VISIBLE 2: GEMASI 3rd Place (PDF) -->
-                <article class="brutalist-border bg-white p-6 flex flex-col reveal-up group">
-                    <a href="assets/docs/cert-gemasi-3.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer" aria-label="Lihat Sertifikat Asli">
-                        <img src="assets/images/cert-gemasi-3.jpg" alt="GEMASI 3rd Place" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col reveal-up group transition-transform duration-300 hover:-translate-y-1" style="transition-delay: 0.1s;">
+                    <a href="assets/docs/cert-gemasi-3.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer" aria-label="View Certificate">
+                        <img src="assets/images/cert-gemasi-3.webp" loading="lazy" decoding="async" alt="GEMASI 3rd Place" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-vermilion uppercase mb-2">3RD PLACE WINNER</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Programming Category</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">GEMASI AMIKOM</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Programming Category</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">GEMASI AMIKOM</p>
                 </article>
 
-                <!-- VISIBLE 3: Dicoding Graduated (PDF) -->
-                <article class="brutalist-border bg-white p-6 flex flex-col reveal-up group">
-                    <a href="assets/docs/cert-dicoding-graduated.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer" aria-label="Lihat Sertifikat Asli">
-                        <img src="assets/images/cert-dicoding-graduated.jpg" alt="Dicoding Graduated" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col reveal-up group transition-transform duration-300 hover:-translate-y-1" style="transition-delay: 0.2s;">
+                    <a href="assets/docs/cert-dicoding-graduated.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer" aria-label="View Certificate">
+                        <img src="assets/images/cert-dicoding-graduated.webp" loading="lazy" decoding="async" alt="Dicoding Graduated" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">GRADUATION CERTIFICATE</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Dicoding Academy Graduate</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Dicoding Academy Graduate</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- HIDDEN 1 to 8: Dicoding Technical Courses -->
-                <!-- Certificate 1 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-1.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-1.jpg" alt="Dicoding Cert 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-1.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-1.webp" loading="lazy" decoding="async" alt="Dicoding Cert 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 1</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 1</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 2 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-2.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-2.jpg" alt="Dicoding Cert 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-2.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-2.webp" loading="lazy" decoding="async" alt="Dicoding Cert 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 2</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 2</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 3 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-3.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-3.jpg" alt="Dicoding Cert 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-3.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-3.webp" loading="lazy" decoding="async" alt="Dicoding Cert 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 3</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 3</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 4 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-4.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-4.jpg" alt="Dicoding Cert 4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-4.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-4.webp" loading="lazy" decoding="async" alt="Dicoding Cert 4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 4</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 4</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 5 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-5.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-5.jpg" alt="Dicoding Cert 5" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-5.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-5.webp" loading="lazy" decoding="async" alt="Dicoding Cert 5" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 5</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 5</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 6 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-6.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-6.jpg" alt="Dicoding Cert 6" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-6.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-6.webp" loading="lazy" decoding="async" alt="Dicoding Cert 6" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 6</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 6</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 7 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-7.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-7.jpg" alt="Dicoding Cert 7" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-7.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-7.webp" loading="lazy" decoding="async" alt="Dicoding Cert 7" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 7</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 7</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate 8 -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-8.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-8.jpg" alt="Dicoding Cert 8" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-8.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-8.webp" loading="lazy" decoding="async" alt="Dicoding Cert 8" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">TECHNICAL CERTIFICATION</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Technical Course 8</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Technical Course 8</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate English -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-english.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-english.jpg" alt="Dicoding English" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-english.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-english.webp" loading="lazy" decoding="async" alt="Dicoding English" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">LANGUAGE COMPETENCY</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">English for Developers</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">English for Developers</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
-                <!-- Certificate Softskill -->
-                <article class="brutalist-border bg-white p-6 flex flex-col group hidden-cert hidden">
-                    <a href="assets/docs/cert-dicoding-softskill.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-surface-container-highest mb-6 overflow-hidden border border-charcoal/20 relative block cursor-pointer">
-                        <img src="assets/images/cert-dicoding-softskill.jpg" alt="Dicoding Softskill" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                <article class="bg-white p-6 flex flex-col group transition-transform duration-300 hover:-translate-y-1 hidden-cert hidden">
+                    <a href="assets/docs/cert-dicoding-softskill.pdf" target="_blank" rel="noopener noreferrer" class="w-full aspect-[4/3] bg-zinc-bg mb-6 overflow-hidden relative block cursor-pointer">
+                        <img src="assets/images/cert-dicoding-softskill.webp" loading="lazy" decoding="async" alt="Dicoding Softskill" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 transform-gpu group-hover:scale-105">
                         <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="material-symbols-outlined text-white text-4xl drop-shadow-md">open_in_new</span>
                         </div>
                     </a>
                     <span class="font-code-sm text-[10px] text-charcoal uppercase mb-2">PROFESSIONAL DEVELOPMENT</span>
-                    <h3 class="font-headline-lg-mobile text-2xl text-charcoal leading-tight mb-2">Career Soft Skills</h3>
-                    <p class="font-label-caps text-xs text-secondary mt-auto">DICODING INDONESIA</p>
+                    <h3 class="text-xl font-bold font-headline-lg text-charcoal leading-tight mb-2">Career Soft Skills</h3>
+                    <p class="font-label-caps text-xs text-charcoal/70 mt-auto">DICODING INDONESIA</p>
                 </article>
 
             </div>
 
-            <!-- Show More Button -->
             <div class="mt-12 flex justify-center reveal-up">
-                <button id="toggle-certs" class="border-2 border-charcoal text-charcoal px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal hover:text-white transition-colors duration-300 magnetic-element" data-magnetic="">
+                <button id="toggle-certs" class="border-2 border-charcoal text-charcoal bg-transparent px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-charcoal hover:text-white transition-colors duration-300 magnetic-element" data-magnetic="">
                     SHOW ALL CREDENTIALS
                 </button>
             </div>
         </section>
-</main>
-<!-- Footer -->
-<footer class="bg-background dark:bg-background border-t-2 border-on-background dark:border-on-background flat no shadows full-width bottom-0 flex flex-col md:flex-row justify-between items-center px-margin-edge py-32 gap-gutter w-full font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim">
-<div class="font-label-caps text-label-caps font-bold text-on-background uppercase">
-            © 2026 MUHAMMAD FAIZ HAMDI. BUILT WITH PRECISION.
+    </main>
+
+    <footer id="contact" class="bg-background border-t-2 border-charcoal/10 flex flex-col md:flex-row justify-between items-center px-6 md:px-margin-edge py-12 gap-8 w-full">
+        <div class="font-label-caps text-label-caps font-bold text-charcoal uppercase text-center md:text-left tracking-widest">
+            © 2026 MUHAMMAD FAIZ HAMDI. <br class="md:hidden">ALL RIGHTS RESERVED.
         </div>
-<div class="flex gap-8">
-    <a href="https://github.com/muhammadfaizhamdi" target="_blank" class="text-on-background opacity-50 hover:text-primary transition-colors uppercase magnetic-element" data-magnetic="">GITHUB</a>
-    <a href="https://www.linkedin.com/in/muhammad-faiz-hamdi-850032348/" target="_blank" class="text-on-background opacity-50 hover:text-primary transition-colors uppercase magnetic-element" data-magnetic="">LINKEDIN</a>
-    <a href="mailto:m.faizhamdi5412@gmail.com" class="text-on-background opacity-50 hover:text-primary transition-colors uppercase magnetic-element" data-magnetic="">EMAIL ME</a>
-</div>
-</footer>
-<script>
-        // Custom Cursor Logic
-        const cursor = document.getElementById('custom-cursor');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
 
-        // Hover effect for interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .magnetic-element');
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-        });
+        <div class="flex flex-wrap justify-center gap-6 md:gap-8 font-label-caps text-label-caps">
+            <a href="mailto:m.faizhamdi5412@gmail.com" class="group flex items-center gap-2 text-charcoal opacity-80 hover:text-vermilion hover:opacity-100 transition-all uppercase magnetic-element" data-magnetic="">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>EMAIL</span>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/muhammad-faiz-hamdi/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 text-charcoal opacity-80 hover:text-vermilion hover:opacity-100 transition-all uppercase magnetic-element" data-magnetic="">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LINKEDIN</span>
+            </a>
+            
+            <a href="https://github.com/muhammadfaizhamdi" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 text-charcoal opacity-80 hover:text-vermilion hover:opacity-100 transition-all uppercase magnetic-element" data-magnetic="">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GITHUB</span>
+            </a>
+        </div>
+    </footer>
 
-        // Magnetic Button Logic
-        const magneticElements = document.querySelectorAll('[data-magnetic]');
-        magneticElements.forEach(el => {
-            el.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                
-                // Spring effect calculation
-                const pullX = x * 0.3;
-                const pullY = y * 0.3;
-                
-                this.style.transform = `translate(${pullX}px, ${pullY}px)`;
-                this.classList.remove('magnetic'); // Remove transition while moving
-            });
-
-            el.addEventListener('mouseleave', function() {
-                this.classList.add('magnetic'); // Add back transition for snap back
-                this.style.transform = 'translate(0px, 0px)';
-            });
-        });
-
-        // Intersection Observer for Reveal Animations
-        const revealElements = document.querySelectorAll('.reveal-up');
-        
-        const revealOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, revealOptions);
-
-        revealElements.forEach(el => {
-            revealOnScroll.observe(el);
-        });
-
-        // Toggle Hidden Certificates
-        const toggleBtn = document.getElementById('toggle-certs');
-        const hiddenCerts = document.querySelectorAll('.hidden-cert');
-        
-        if(toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
-                let isHidden = false;
-                hiddenCerts.forEach(cert => {
-                    cert.classList.toggle('hidden');
-                    if(cert.classList.contains('hidden')) isHidden = true;
-                });
-                
-                if(!isHidden) {
-                    toggleBtn.innerText = "SHOW LESS";
-                } else {
-                    toggleBtn.innerText = "SHOW ALL CREDENTIALS";
-                    // Optional: Scroll back to grid top when closing
-                    document.getElementById('credentials').scrollIntoView({behavior: 'smooth'});
-                }
-            });
-        }
-    </script>
-</body></html>
+    <script src="js/main.js"></script>
+</body>
+</html>

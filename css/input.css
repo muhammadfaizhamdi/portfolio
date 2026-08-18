@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: theme('colors.zinc-bg');
+    color: theme('colors.charcoal');
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: theme('colors.vermilion');
+    color: white;
+}
+
+@media (pointer: fine) {
+    body { cursor: none; }
+    #custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: white; 
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate3d(-50%, -50%, 0);
+        mix-blend-mode: difference;
+        transition: width 0.2s ease, height 0.2s ease;
+        will-change: transform;
+    }
+    #custom-cursor.hovering {
+        width: 48px;
+        height: 48px;
+        background-color: white; 
+    }
+}
+
+@media (pointer: coarse) {
+    body { cursor: auto; }
+    #custom-cursor { display: none !important; }
+}
+
+.magnetic {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
