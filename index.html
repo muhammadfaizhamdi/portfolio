@@ -14,10 +14,12 @@
     <meta property="og:description" content="Portfolio of Muhammad Faiz Hamdi, specializing in building intelligent systems and modern web applications using Python, JavaScript, and FastAPI.">
     <meta property="og:image" content="https://muhammadfaizhamdi.github.io/assets/images/foto-profil.webp">
     
+    <link rel="preload" as="image" href="assets/images/foto-profil.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" /></noscript>
     
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="antialiased min-h-screen relative font-body-md text-body-md selection:bg-vermilion selection:text-white">
@@ -40,33 +42,62 @@
         <canvas id="shader-canvas-ANIMATION_1" class="w-full h-full block"></canvas>
     </div>
 
-    <header class="bg-background/80 backdrop-blur-md font-label-caps text-label-caps docked full-width top-0 sticky z-50 border-b border-charcoal/10 flex justify-between items-center px-6 md:px-margin-edge py-4 md:py-gutter max-w-full">
-        <a href="#" class="text-xl md:font-headline-lg-mobile md:text-headline-lg-mobile font-bold tracking-tighter text-charcoal hover:text-vermilion transition-colors z-50">
+    <header class="bg-background/80 backdrop-blur-md font-label-caps text-label-caps docked full-width top-0 sticky z-50 border-b-2 border-charcoal flex justify-between items-center px-6 md:px-margin-edge py-4 md:py-gutter max-w-full">
+        <a href="#" class="text-xl md:font-headline-lg-mobile md:text-headline-lg-mobile font-bold tracking-tighter text-charcoal hover:text-vermilion transition-colors z-50 relative">
             MUHAMMAD FAIZ HAMDI
         </a>
+        
+        <!-- Desktop Nav -->
         <nav class="hidden md:flex gap-8">
             <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#stack">STACK</a>
             <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#work">WORK</a>
             <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#experience">EXPERIENCE</a>
             <a class="nav-link text-charcoal opacity-80 font-label-caps text-label-caps uppercase tracking-widest hover:text-vermilion hover:opacity-100 transition-all duration-300 magnetic-element border-b-2 border-transparent pb-1" data-magnetic="" href="#contact">CONTACT</a>
         </nav>
-        <a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center bg-vermilion text-white font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-charcoal transition-colors duration-300 magnetic-element" data-magnetic="">
+        
+        <!-- Hamburger Button (Mobile) -->
+        <button id="mobile-menu-btn" class="md:hidden relative z-50 p-2 text-charcoal focus:outline-none" aria-label="Toggle Menu">
+            <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="menu-icon">menu</span>
+        </button>
+
+        <a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center bg-vermilion border-2 border-vermilion text-white font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-transparent hover:text-vermilion transition-colors duration-300 magnetic-element" data-magnetic="">
             DOWNLOAD CV
         </a>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 flex justify-end translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+        
+        <!-- Side Panel Content -->
+        <div class="w-[65%] max-w-[260px] h-full bg-background/95 backdrop-blur-2xl shadow-2xl flex flex-col justify-center px-6 relative">
+            <nav class="flex flex-col gap-8 text-right">
+                <a class="mobile-nav-link text-xl sm:text-2xl font-headline-lg font-bold text-charcoal active:text-vermilion transition-colors" href="#stack">STACK</a>
+                <a class="mobile-nav-link text-xl sm:text-2xl font-headline-lg font-bold text-charcoal active:text-vermilion transition-colors" href="#work">WORK</a>
+                <a class="mobile-nav-link text-xl sm:text-2xl font-headline-lg font-bold text-charcoal active:text-vermilion transition-colors" href="#experience">EXPERIENCE</a>
+                <a class="mobile-nav-link text-xl sm:text-2xl font-headline-lg font-bold text-charcoal active:text-vermilion transition-colors" href="#contact">CONTACT</a>
+                
+                <div class="w-full h-[1px] bg-charcoal/20 my-1"></div>
+                
+                <a href="assets/docs/CV_Muhammad_Faiz_Hamdi.pdf" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center bg-vermilion border-2 border-vermilion text-white px-4 py-3 font-label-caps text-xs sm:text-sm uppercase tracking-widest active:bg-transparent active:text-vermilion transition-colors duration-300 text-center">
+                    DOWNLOAD CV
+                </a>
+            </nav>
+        </div>
+        
+    </div>
 
     <main class="px-6 md:px-margin-edge pb-[160px] overflow-hidden">
         
         <section class="min-h-[80vh] flex flex-col justify-center pt-16 md:pt-24 pb-32 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-gutter items-center">
-                <div class="col-span-1 md:col-span-7 flex flex-col justify-center reveal-up z-10 order-2 md:order-1">
-                    <h1 class="font-display-2xl text-[64px] leading-[64px] font-bold sm:text-[90px] sm:leading-[90px] md:text-[110px] md:leading-none text-charcoal mb-2 tracking-tight mix-blend-multiply">
+                <div class="col-span-1 md:col-span-7 flex flex-col justify-center reveal-up z-10 order-1 pt-4 md:pt-0 md:-translate-y-8 lg:-translate-y-12">
+                    <h1 class="font-display-2xl text-[64px] leading-[64px] font-bold sm:text-[90px] sm:leading-[90px] md:text-[110px] md:leading-none text-charcoal mb-0 tracking-tight mix-blend-multiply">
                         FULLSTACK
                     </h1>
-                    <h2 class="font-headline-lg text-2xl sm:text-[32px] md:text-[40px] lg:text-[50px] text-charcoal/80 mb-8 uppercase italic leading-tight font-bold whitespace-nowrap">
+                    <h2 class="font-headline-lg text-[28px] sm:text-[36px] md:text-[46px] lg:text-[58px] text-charcoal/80 mb-6 uppercase italic leading-tight font-bold whitespace-nowrap tracking-tighter">
                         DEVELOPER & AI ENGINEER
                     </h2>
-                    <p class="font-body-md text-base sm:text-lg text-charcoal/80 max-w-2xl mb-12 leading-relaxed">
+                    <p class="font-body-md text-base sm:text-lg text-charcoal/80 max-w-2xl mb-10 leading-relaxed">
                         I am a Fullstack Developer focusing on building robust end-to-end web applications. With expertise in JavaScript, Next.js, Python, and FastAPI, I specialize in creating seamless user interfaces and strong backend architectures. I bring additional value through practical experience in integrating machine learning models to build smarter digital solutions.
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
@@ -79,8 +110,8 @@
                     </div>
                 </div>
 
-                <div class="col-span-1 md:col-span-5 relative reveal-up flex justify-center md:justify-end mt-4 md:mt-0 order-1 md:order-2" style="transition-delay: 0.2s;">
-                    <div class="relative w-full max-w-[250px] sm:max-w-[280px] md:max-w-[320px] aspect-[4/5] group z-10 mx-auto md:mx-0">
+                <div class="col-span-1 md:col-span-5 relative reveal-up flex justify-center md:justify-end mt-12 md:mt-0 order-2" style="transition-delay: 0.2s;">
+                    <div class="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] aspect-[4/5] group z-10 mx-auto md:mx-0">
                         <div class="absolute inset-0 bg-charcoal translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4 -z-10"></div>
                         <img src="assets/images/foto-profil.webp" alt="Muhammad Faiz Hamdi" fetchpriority="high" class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:border-[4px] group-hover:border-vermilion group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-300 relative z-10" />
                     </div>
@@ -99,39 +130,39 @@
                 <div class="flex flex-col">
                     <h3 class="font-label-caps font-bold text-sm text-vermilion uppercase tracking-widest border-b-2 border-charcoal pb-4 mb-2">AI & Machine Learning</h3>
                     <div class="flex flex-col">
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Python</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">TensorFlow, PyTorch, TensorRT</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Deep Learning & Generative AI</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">NLP & Computer Vision</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Time Series & Knowledge Tracing</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">Vector DB</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-charcoal hover:text-white hover:pl-4 transition-all duration-300 selection:bg-vermilion selection:text-white">EDA & Data Cleaning</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">Python</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">TensorFlow, PyTorch, TensorRT</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">Deep Learning & Generative AI</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">NLP & Computer Vision</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">Time Series & Knowledge Tracing</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">Vector DB</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-charcoal md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-vermilion md:selection:text-white">EDA & Data Cleaning</div>
                     </div>
                 </div>
 
                 <div class="flex flex-col">
                     <h3 class="font-label-caps font-bold text-sm text-charcoal uppercase tracking-widest border-b-2 border-charcoal pb-4 mb-2">Web Development</h3>
                     <div class="flex flex-col">
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">JavaScript, HTML5, CSS3</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">React.js & Next.js</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">FastAPI, Node.js, Express</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">RESTful API</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Tailwind CSS</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">WebGL (Fragment Shaders)</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Intersection Observer API</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">JavaScript, HTML5, CSS3</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">React.js & Next.js</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">FastAPI, Node.js, Express</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">RESTful API</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Tailwind CSS</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">WebGL (Fragment Shaders)</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Intersection Observer API</div>
                     </div>
                 </div>
 
                 <div class="flex flex-col">
                     <h3 class="font-label-caps font-bold text-sm text-charcoal uppercase tracking-widest border-b-2 border-charcoal pb-4 mb-2">Tools & Databases</h3>
                     <div class="flex flex-col">
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">PostgreSQL & MySQL</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Git & GitHub</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">VS Code & Jupyter Notebook</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Figma</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Prompt Engineering</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Metadata Tagging</div>
-                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal hover:bg-vermilion hover:text-white hover:pl-4 transition-all duration-300 selection:bg-charcoal selection:text-white">Data Synthesis</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">PostgreSQL & MySQL</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Git & GitHub</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">VS Code & Jupyter Notebook</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Figma</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Prompt Engineering</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Metadata Tagging</div>
+                        <div class="py-3 border-b border-charcoal/10 font-code-sm text-sm uppercase text-charcoal md:hover:bg-vermilion md:hover:text-white md:hover:pl-4 transition-all duration-300 md:selection:bg-charcoal md:selection:text-white">Data Synthesis</div>
                     </div>
                 </div>
             </div>
@@ -155,12 +186,12 @@
                             <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">NEXT.JS</span>
                             <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">OPENAI</span>
                         </div>
-                        <h3 class="text-[32px] md:text-[64px] text-charcoal leading-tight mb-4 font-bold font-headline-lg">KreasiKan: AI Content Platform</h3>
+                        <h3 class="text-[32px] md:text-[64px] text-charcoal leading-tight mb-4 font-bold font-headline-lg transition-colors duration-300 group-hover:text-vermilion">KreasiKan: AI Content Platform</h3>
                         <p class="font-body-md text-sm sm:text-base text-charcoal/80 max-w-xl">An all-in-one content automation platform that helps creators and small businesses effortlessly scale their social media presence. It features a visual workflow builder that connects various AI models to generate customized, platform-ready content.</p>
                     </div>
                     <div class="mt-8 flex justify-end relative z-10">
                         <a href="https://kreasikan.app" target="_blank" rel="noopener noreferrer" class="inline-block" aria-label="Visit KreasiKan Live Website">
-                            <span class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1">arrow_outward</span>
+                            <span class="material-symbols-outlined text-[32px] sm:text-[36px] text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1">arrow_outward</span>
                         </a>
                     </div>
                 </article>
@@ -173,28 +204,28 @@
                             <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">FASTAPI</span>
                             <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">TENSORFLOW</span>
                         </div>
-                        <h3 class="text-[32px] md:text-[40px] leading-tight text-charcoal mb-4 font-bold font-headline-lg">AMATI: Adaptive Learning</h3>
-                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 group-hover:pr-4">A smart educational platform designed to make math learning highly personalized. It combines a virtual tutor with AI to adapt the curriculum's difficulty to each student's pace in real-time.</p>
+                        <h3 class="text-[32px] md:text-[40px] leading-tight text-charcoal mb-4 font-medium font-headline-lg transition-colors duration-300 group-hover:text-vermilion">AMATI: Adaptive Learning</h3>
+                        <p class="font-body-md text-sm sm:text-base text-charcoal/80">A smart educational platform designed to make math learning highly personalized. It combines a virtual tutor with AI to adapt the curriculum's difficulty to each student's pace in real-time.</p>
                     </div>
                     <div class="mt-8 flex justify-end relative z-10">
                         <a href="https://github.com/muhammadfaizhamdi/amati-app" target="_blank" rel="noopener noreferrer" class="inline-block" aria-label="View AMATI Code">
-                            <span class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1">arrow_outward</span>
+                            <span class="material-symbols-outlined text-[32px] sm:text-[36px] text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1">arrow_outward</span>
                         </a>
                     </div>
                 </article>
 
-                <article class="col-span-1 md:col-span-12 bg-charcoal text-white shadow-sm p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center reveal-up group hover:-translate-y-1 hover:bg-vermilion hover:shadow-md transition-all duration-300" style="transition-delay: 0.2s;">
+                <article class="col-span-1 md:col-span-12 bg-charcoal text-white shadow-sm p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center reveal-up group transition-all duration-300 hover:-translate-y-1 hover:bg-vermilion" style="transition-delay: 0.2s;">
                     <div class="flex-1 relative z-10 mb-6 md:mb-0 md:pr-16 w-full">
                         <div class="flex gap-2 mb-4 flex-wrap">
-                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase transition-colors duration-300">AWARD WINNER</span>
-                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase transition-colors duration-300">COMPETITIVE PROGRAMMING</span>
-                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase transition-colors duration-300">FINTECH</span>
+                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase">ACHIEVEMENT</span>
+                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase">COMPETITIVE PROGRAMMING</span>
+                            <span class="border border-white/30 text-white/90 px-2 py-1 font-code-sm text-[10px] uppercase">DIGITAL BUSINESS</span>
                         </div>
-                        <h3 class="text-[28px] md:text-[36px] leading-tight mb-2 font-bold font-headline-lg">Award Winner: GEMASI AMIKOM</h3>
-                        <p class="font-body-md text-sm sm:text-base text-white/90 max-w-3xl lg:max-w-4xl">Secured 2nd Place in Digital Business & Fintech and 3rd Place in Programming. This recognition demonstrates a strong balance between innovative business strategy, product feasibility, and logical algorithmic problem-solving.</p>
+                        <h3 class="text-[28px] md:text-[32px] leading-tight mb-2 font-bold font-headline-lg md:whitespace-nowrap">Award Winner: GEMASI AMIKOM</h3>
+                        <p class="font-body-md text-sm sm:text-base text-white/80 pr-4 lg:pr-12">Secured 2nd Place in Digital Business & Fintech and 3rd Place in Programming. This recognition demonstrates a<br class="hidden md:block"> strong balance between innovative business strategy, product feasibility, and logical algorithmic problem-solving.</p>
                     </div>
                     <div class="relative z-10 w-full md:w-auto shrink-0">
-                        <a href="#credentials" class="block md:inline-block bg-transparent text-white border border-white px-8 py-4 md:py-3 font-label-caps text-[12px] uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors text-center whitespace-nowrap">VIEW CERTIFICATES</a>
+                        <a href="#credentials" class="block md:inline-block bg-transparent text-white border border-white px-6 py-2.5 font-label-caps text-[12px] uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors text-center whitespace-nowrap">VIEW CERTIFICATES</a>
                     </div>
                 </article>
             </div>
@@ -213,7 +244,7 @@
                                 <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">PYTHON</span>
                                 <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">POSTGRESQL</span>
                             </div>
-                            <h4 class="text-xl sm:text-2xl text-charcoal mb-2 font-bold font-headline-lg">Zeera Laundry System</h4>
+                            <h4 class="text-xl sm:text-2xl text-charcoal mb-2 font-medium font-headline-lg">Zeera Laundry System</h4>
                             <p class="font-body-md text-sm text-charcoal/80 mb-6">A complete management platform built to simplify operations. It equips owners with an operational dashboard, giving customers a login-free portal to track orders via QR codes.</p>
                             <div class="mt-auto flex justify-end">
                                 <a href="https://github.com/muhammadfaizhamdi/zeera-laundry-system" target="_blank" rel="noopener noreferrer" class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1" aria-label="View Zeera Laundry Code">arrow_outward</a>
@@ -228,7 +259,7 @@
                                 <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">KOTLIN</span>
                                 <span class="border border-charcoal px-2 py-1 font-code-sm text-[10px] uppercase text-charcoal">ON-DEVICE ML</span>
                             </div>
-                            <h4 class="text-xl sm:text-2xl text-charcoal mb-2 font-bold font-headline-lg">EduKids Learning App</h4>
+                            <h4 class="text-xl sm:text-2xl text-charcoal mb-2 font-medium font-headline-lg">EduKids Learning App</h4>
                             <p class="font-body-md text-sm text-charcoal/80 mb-6">An interactive Android app making learning fun and safe for children. It features gamified quizzes and utilizes on-device machine learning to recognize physical objects.</p>
                             <div class="mt-auto flex justify-end">
                                 <a href="https://github.com/muhammadfaizhamdi/KidsEducation" target="_blank" rel="noopener noreferrer" class="material-symbols-outlined text-2xl sm:text-3xl text-charcoal transition-all duration-300 group-hover:text-vermilion group-hover:-translate-y-1 group-hover:translate-x-1" aria-label="View EduKids Code">arrow_outward</a>
@@ -236,9 +267,9 @@
                         </div>
                     </article>
                     
-                    <article class="bg-transparent p-6 sm:p-8 flex flex-col items-center justify-center text-charcoal/40 transition-all duration-300 min-h-[200px] sm:min-h-[250px] group hover:-translate-y-1 hover:ring-1 hover:ring-charcoal/10">
-                        <span class="material-symbols-outlined text-4xl mb-2 group-hover:text-vermilion transition-colors">code</span>
-                        <p class="font-label-caps text-xs uppercase text-center tracking-widest group-hover:text-charcoal/80 transition-colors">Building Next Project...</p>
+                    <article class="bg-transparent p-6 sm:p-8 flex flex-col items-center justify-center text-charcoal/40 transition-all duration-300 min-h-[200px] sm:min-h-[250px] group hover:-translate-y-1 hover:ring-1 hover:ring-charcoal/5">
+                        <span class="material-symbols-outlined text-3xl mb-4 text-charcoal/50 transition-colors duration-300 group-hover:text-charcoal/80">code</span>
+<p class="font-label-caps text-xs uppercase text-center tracking-widest text-charcoal/50 transition-colors duration-300 group-hover:text-charcoal/80">Building Next Project...</p>
                     </article>
                 </div>
             </div>
@@ -261,7 +292,7 @@
                     </div>
                     <div class="md:col-span-7 md:pl-12">
                         <h3 class="font-headline-lg-mobile md:text-[40px] leading-[44px] text-charcoal mb-3 md:mb-4 font-bold">Freelance Web Developer</h3>
-                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 max-w-xl transition-all duration-300 group-hover:tracking-wide">Designed and developed a custom fullstack information system for business operations. Integrated a customer-facing self-tracking portal with QR code features to enhance service transparency and efficiency.</p>
+                        <p class="font-body-md text-sm sm:text-base text-charcoal/80 max-w-xl">Designed and developed a custom fullstack information system for business operations. Integrated a customer-facing self-tracking portal with QR code features to enhance service transparency and efficiency.</p>
                     </div>
                 </div>
 
@@ -269,7 +300,7 @@
                     <!-- Bulatan Bawah: Abu-abu diam, tanpa efek hover -->
                     <div class="hidden sm:block absolute left-[16px] md:left-[41.666%] top-2 md:top-3 w-[14px] h-[14px] bg-zinc-bg border-[2px] border-charcoal/40 rounded-full transform -translate-x-1/2 z-10"></div>
                     <div class="md:col-span-5 text-left md:text-right md:pr-12 flex flex-col justify-start pt-1 md:pt-2">
-                        <span class="font-code-sm text-sm sm:text-base md:text-lg text-charcoal/60 mb-1">FEB 2026 — AUG 2026</span>
+                        <span class="font-code-sm text-sm sm:text-base md:text-lg text-charcoal/70 mb-1">FEB 2026 — AUG 2026</span>
                         <span class="font-label-caps text-xs sm:text-sm text-charcoal uppercase">DICODING INDONESIA</span>
                     </div>
                     <div class="md:col-span-7 md:pl-12">
@@ -476,6 +507,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

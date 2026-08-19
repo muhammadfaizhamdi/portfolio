@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. PRELOADER
     const preloader = document.getElementById('preloader');
     const preloaderBar = document.getElementById('preloader-bar');
     const preloaderCounter = document.getElementById('preloader-counter');
@@ -32,17 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 2. WEBGL SHADER BACKGROUND (Optimized - No Forced Reflow)
     const canvas = document.getElementById('shader-canvas-ANIMATION_1');
     if (canvas) {
         function syncSize() {
-            const w = canvas.clientWidth || window.innerWidth;
-            const h = canvas.clientHeight || window.innerHeight;
-            if (canvas.width !== w || canvas.height !== h) {
-                canvas.width = w;
-                canvas.height = h;
-            }
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
-        if (typeof ResizeObserver !== 'undefined') new ResizeObserver(syncSize).observe(canvas);
+        window.addEventListener('resize', syncSize);
         syncSize();
 
         const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const uRes = gl.getUniformLocation(prog, 'u_resolution');
             
             function render(t) {
-                if (typeof ResizeObserver === 'undefined') syncSize();
                 gl.viewport(0, 0, canvas.width, canvas.height);
                 if (uTime) gl.uniform1f(uTime, t * 0.001);
                 if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
@@ -87,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 3. CUSTOM CURSOR & MAGNETIC BUTTONS (Safe for Desktop Only)
     const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
     const cursor = document.getElementById('custom-cursor');
     
@@ -100,11 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
         });
-    } else if (cursor) {
-        cursor.style.display = 'none';
-    }
 
-    if (!isTouchDevice) {
         const magneticElements = document.querySelectorAll('[data-magnetic]');
         magneticElements.forEach(el => {
             el.addEventListener('mousemove', function(e) {
@@ -120,8 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.style.transform = 'translate(0px, 0px)';
             });
         });
+    } else if (cursor) {
+        cursor.style.display = 'none';
     }
 
+    // 4. REVEAL ANIMATION (Intersection Observer)
     const revealElements = document.querySelectorAll('.reveal-up');
     const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     
@@ -135,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, revealOptions);
     revealElements.forEach(el => revealOnScroll.observe(el));
 
+    // 5. TOGGLE CERTIFICATES
     const toggleBtn = document.getElementById('toggle-certs');
     const hiddenCerts = document.querySelectorAll('.hidden-cert');
     
@@ -154,23 +153,63 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 6. SCROLL SPY NAV (Optimized - No Forced Reflow via Intersection Observer)
     const sections = document.querySelectorAll('section[id], footer[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (scrollY >= (sectionTop - 150)) current = section.getAttribute('id');
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('text-vermilion', 'border-vermilion', 'opacity-100');
-            link.classList.add('opacity-80', 'border-transparent');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('text-vermilion', 'border-vermilion', 'opacity-100');
-                link.classList.remove('opacity-80', 'border-transparent');
+    
+    const scrollSpyOptions = { root: null, rootMargin: '-40% 0px -60% 0px', threshold: 0 };
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('text-vermilion', 'border-vermilion', 'opacity-100');
+                    link.classList.add('opacity-80', 'border-transparent');
+                    if (link.getAttribute('href') === `#${entry.target.id}`) {
+                        link.classList.add('text-vermilion', 'border-vermilion', 'opacity-100');
+                        link.classList.remove('opacity-80', 'border-transparent');
+                    }
+                });
             }
         });
-    });
+    }, scrollSpyOptions);
+    
+    sections.forEach(sec => scrollSpyObserver.observe(sec));
+
+    // 7. MOBILE MENU TOGGLE
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const menuBackdrop = document.getElementById('mobile-menu-backdrop'); // Area klik untuk tutup
+
+    if (mobileMenuBtn && mobileMenu) {
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full', 'pointer-events-none');
+                menuIcon.textContent = 'close';
+                document.body.style.overflow = 'hidden'; 
+            } else {
+                mobileMenu.classList.add('translate-x-full', 'pointer-events-none');
+                menuIcon.textContent = 'menu';
+                document.body.style.overflow = ''; 
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        if (menuBackdrop) {
+            menuBackdrop.addEventListener('click', () => {
+                if (isMenuOpen) toggleMenu();
+            });
+        }
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) toggleMenu();
+            });
+        });
+    }
 });
